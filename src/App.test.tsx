@@ -11,7 +11,7 @@ describe("Kata pricing app", () => {
     expect(screen.getByText(/face masks/i)).toBeInTheDocument();
     expect(screen.getByText(/toilet paper/i)).toBeInTheDocument();
     expect(screen.getByText(/hand sanitizer/i)).toBeInTheDocument();
-    expect(screen.getByText(/add item/i)).toHaveLength(3);
+    expect(screen.getAllByText(/add item/i)).toHaveLength(3);
   });
 
   it("should able to add a product to basket", () => {
