@@ -1,0 +1,18 @@
+{
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "sort-imports.on-save": false,
+  "cSpell.language": "en-GB",
+  "cSpell.words": [
+  ]
+}
