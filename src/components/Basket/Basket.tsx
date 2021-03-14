@@ -1,9 +1,11 @@
 import React, { FunctionComponent } from "react";
 import { usePricer } from "../../hooks/usePricer";
+import { useTotals } from "../../hooks/useTotals";
 import { formatPrice } from "../../utils/formatPrice";
 
 export const Basket: FunctionComponent = () => {
   const { basketProducts, removeBasketProduct } = usePricer();
+  const { subTotal, total } = useTotals();
 
   return (
     <table>
@@ -33,18 +35,14 @@ export const Basket: FunctionComponent = () => {
         </tr>
         <tr>
           <td>Sub-total</td>
-          <td data-testid="sub-total">
-            {formatPrice(basketProducts[0]?.unitPrice)}
-          </td>
+          <td data-testid="sub-total">{subTotal}</td>
         </tr>
         <tr>
           <td colSpan={2}>----------------</td>
         </tr>
         <tr>
           <td>Total to pay</td>
-          <td data-testid="total">
-            {formatPrice(basketProducts[0]?.unitPrice)}
-          </td>
+          <td data-testid="total">{total}</td>
         </tr>
       </tbody>
     </table>
