@@ -17,7 +17,6 @@ describe("Kata pricing app", () => {
     );
     expect(screen.getByTestId("basket-price-1")).toHaveTextContent("2.50");
 
-    expect(screen.getByTestId("sub-total")).toHaveTextContent("2.50");
     expect(screen.getByTestId("total")).toHaveTextContent("2.50");
   });
 
