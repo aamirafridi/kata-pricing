@@ -26,10 +26,10 @@ describe("Kata pricing app", () => {
     fireEvent.click(screen.getByTestId(/product-1/));
 
     expect(screen.getByTestId("sub-total")).toHaveTextContent("5.00");
-    expect(screen.getByTestId("savings-product-1")).toHaveTextContent(
-      "Face Masks 2 for £4"
+    expect(screen.getByTestId("savings-product-0")).toHaveTextContent(
+      "Two Face Masks for £4"
     );
-    expect(screen.getByTestId("savings-price-1")).toHaveTextContent("-1.00");
+    expect(screen.getByTestId("savings-price-0")).toHaveTextContent("-1.00");
     expect(screen.getByTestId("total-savings")).toHaveTextContent("-1.00");
 
     expect(screen.getByTestId("total")).toHaveTextContent("4");
