@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+
 import { usePricer } from "../../hooks/usePricer";
 import { discounts } from "../../mockData";
 import { formatPrice } from "../../utils/formatPrice";
