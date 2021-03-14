@@ -7,14 +7,9 @@ export const BasketTotal: FunctionComponent = () => {
   const { totalAfterSavings } = useBasket();
 
   return (
-    <>
-      <tr>
-        <td colSpan={2}>----------------</td>
-      </tr>
-      <tr>
-        <td>Total to pay</td>
-        <td data-testid="total">{formatPrice(totalAfterSavings)}</td>
-      </tr>
-    </>
+    <tr>
+      <td>Total to pay</td>
+      <td data-testid="total">{formatPrice(totalAfterSavings)}</td>
+    </tr>
   );
 };

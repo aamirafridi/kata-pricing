@@ -18,7 +18,7 @@ export const BasketItems: FunctionComponent = () => {
               data-testid={`remove-product-${index}`}
               onClick={() => removeBasketProduct(product.id)}
             >
-              X
+              ×
             </button>
           </td>
         </tr>

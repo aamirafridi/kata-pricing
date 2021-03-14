@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 
 import { useBasket } from "../../hooks/useBasket";
 import { formatPrice } from "../../utils/formatPrice";
+import { BasketDivider } from "./ BasketDivider";
 
 export const BasketSavings: FunctionComponent = () => {
   const { subTotal, productSavings, totalSavings } = useBasket();
@@ -12,9 +13,6 @@ export const BasketSavings: FunctionComponent = () => {
 
   return (
     <>
-      <tr>
-        <td colSpan={2}>----------------</td>
-      </tr>
       <tr>
         <td>Sub-total</td>
         <td data-testid="sub-total">{formatPrice(subTotal)}</td>
@@ -28,13 +26,12 @@ export const BasketSavings: FunctionComponent = () => {
           <td data-testid={`savings-price-${index}`}>-{formatPrice(price)}</td>
         </tr>
       ))}
-      <tr>
-        <td colSpan={2}>----------------</td>
-      </tr>
+      <BasketDivider />
       <tr>
         <td>Total savings</td>
         <td data-testid="total-savings">-{formatPrice(totalSavings)}</td>
       </tr>
+      <BasketDivider />
     </>
   );
 };

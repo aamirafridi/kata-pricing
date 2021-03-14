@@ -15,6 +15,7 @@ Demo: https://aamirafridi.github.io/kata-pricing/
 - tested with a mixture of unit and integration test approach as usually suggested by react testing library. I like this approach because refactoring is super easy e.g. check the commit where this text is added (hook and file renamed without any failing tests)
 - precommit hooks added
 - avoided spending time on styles as it was not a requirement
+- valid and assessable HTML (you can add or remove products with keyboard tabbing and space-bar)
 
 ---
 

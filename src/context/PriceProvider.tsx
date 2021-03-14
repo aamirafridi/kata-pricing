@@ -24,6 +24,8 @@ export const PricerProvider: FunctionComponent = ({ children }) => {
     [basketProductIds]
   );
 
+  // no need to use useMemo here because adding or removing products
+  // will always mutate basketProductIds
   const basketProducts = basketProductIds.reduce(
     (result: Array<Product>, productId) => {
       const foundProduct = products.find(

@@ -23,18 +23,15 @@ export const useBasket = () => {
       const quantity = pair[1] as number;
       const product = products.find(({ id }) => id === productId) as Product;
       const discount = discounts[productId];
-      if (discount) {
-        if (quantity < discount.units) {
-          return savings;
-        }
 
-        const remainder = quantity % discount.units;
-        const quantityCanBeDiscounted = quantity - remainder;
-        const discountPrice =
-          (quantityCanBeDiscounted / discount.units) * discount.price;
-        const discountTotalPrice =
-          remainder * product.unitPrice + discountPrice;
-        const totalSaving = product.unitPrice * quantity - discountTotalPrice;
+      if (discount && quantity >= discount.units) {
+        const remainderQuantity = quantity % discount.units;
+        const quantityThatCanBeDiscounted = quantity - remainderQuantity;
+        const discountedPrice =
+          (quantityThatCanBeDiscounted / discount.units) * discount.price;
+        const discountedTotalPrice =
+          remainderQuantity * product.unitPrice + discountedPrice;
+        const totalSaving = product.unitPrice * quantity - discountedTotalPrice;
         savings.push({
           label: discount.label,
           price: totalSaving,
