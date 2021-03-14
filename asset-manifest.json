@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kata-pricing/static/css/main.5d162286.chunk.css",
+    "main.js": "/kata-pricing/static/js/main.aef682ab.chunk.js",
+    "main.js.map": "/kata-pricing/static/js/main.aef682ab.chunk.js.map",
+    "runtime-main.js": "/kata-pricing/static/js/runtime-main.1ae6e060.js",
+    "runtime-main.js.map": "/kata-pricing/static/js/runtime-main.1ae6e060.js.map",
+    "static/js/2.14f4eb9f.chunk.js": "/kata-pricing/static/js/2.14f4eb9f.chunk.js",
+    "static/js/2.14f4eb9f.chunk.js.map": "/kata-pricing/static/js/2.14f4eb9f.chunk.js.map",
+    "static/js/3.51526bd0.chunk.js": "/kata-pricing/static/js/3.51526bd0.chunk.js",
+    "static/js/3.51526bd0.chunk.js.map": "/kata-pricing/static/js/3.51526bd0.chunk.js.map",
+    "index.html": "/kata-pricing/index.html",
+    "static/css/main.5d162286.chunk.css.map": "/kata-pricing/static/css/main.5d162286.chunk.css.map",
+    "static/js/2.14f4eb9f.chunk.js.LICENSE.txt": "/kata-pricing/static/js/2.14f4eb9f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ae6e060.js",
+    "static/js/2.14f4eb9f.chunk.js",
+    "static/css/main.5d162286.chunk.css",
+    "static/js/main.aef682ab.chunk.js"
+  ]
+}
