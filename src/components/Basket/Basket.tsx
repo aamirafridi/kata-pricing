@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 
 import { usePricer } from "../../hooks/usePricer";
-import { useTotals } from "../../hooks/useTotals";
+import { useBasket } from "../../hooks/useBasket";
 import { formatPrice } from "../../utils/formatPrice";
 
 export const Basket: FunctionComponent = () => {
@@ -11,7 +11,7 @@ export const Basket: FunctionComponent = () => {
     productSavings,
     totalSavings,
     totalAfterSavings,
-  } = useTotals();
+  } = useBasket();
 
   return (
     <table>

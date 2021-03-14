@@ -1,7 +1,7 @@
 import { discounts, Product, products } from "../mockData";
 import { usePricer } from "./usePricer";
 
-export const useTotals = () => {
+export const useBasket = () => {
   const { basketProducts } = usePricer();
 
   const total = basketProducts.reduce((total, product) => {

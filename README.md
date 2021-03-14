@@ -12,7 +12,7 @@ Demo: https://aamirafridi.github.io/kata-pricing/
 - prettier and lint scripts added (sort imported added too)
 - use of react context API and hooks
 - 100% code coverage ![image](https://user-images.githubusercontent.com/55896/111080812-1391a500-84f8-11eb-8eb8-2223ec5c4553.png)
-- tested with a mixture of unit and integration test approach as usually suggested by react testing library
+- tested with a mixture of unit and integration test approach as usually suggested by react testing library. I like this approach because refactoring is super easy e.g. check the commit where this text is added (hook and file renamed without any failing tests)
 - precommit hooks added
 - avoided spending time on styles as it was not a requirement
 
