@@ -9,13 +9,15 @@ describe("Kata pricing app", () => {
 
   it("should able to add a product to basket", () => {
     render(<App />);
-    fireEvent.click(screen.getByTestId(/product-1/));
+    fireEvent.click(screen.getByTestId(/add-product-1/));
 
-    expect(screen.getByTestId("basket-item-1")).toContain("face masks");
-    expect(screen.getByTestId("basket-price-1")).toContain("2.50");
+    expect(screen.getByTestId("basket-item-1")).toHaveTextContent(
+      /face masks/i
+    );
+    expect(screen.getByTestId("basket-price-1")).toHaveTextContent("2.50");
 
-    expect(screen.getByTestId("sub-total")).toContain("2.50");
-    expect(screen.getByTestId("total")).toContain("2.50");
+    expect(screen.getByTestId("sub-total")).toHaveTextContent("2.50");
+    expect(screen.getByTestId("total")).toHaveTextContent("2.50");
   });
 
   it("should able to add a product to basket and show savings", () => {
