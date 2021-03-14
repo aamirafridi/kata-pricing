@@ -26,7 +26,7 @@
     "test:watch": "npm test --watchAll",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --fix"
   },
   "husky": {
     "hooks": {
@@ -43,7 +43,33 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "plugins": [
+      "no-only-tests",
+      "simple-import-sort"
+    ],
+    "rules": {
+      "no-only-tests/no-only-tests": "error",
+      "simple-import-sort/imports": [
+        "warn",
+        {
+          "groups": [
+            [
+              "^\\u0000"
+            ],
+            [
+              "^@?\\w"
+            ],
+            [
+              "^"
+            ],
+            [
+              "^\\."
+            ]
+          ]
+        }
+      ]
+    }
   },
   "jest": {
     "coverageThreshold": {
@@ -69,7 +95,9 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-no-only-tests": "^2.4.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.2.1"
   }
 }

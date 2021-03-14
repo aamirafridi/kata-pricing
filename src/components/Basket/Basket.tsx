@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+
 import { usePricer } from "../../hooks/usePricer";
 import { useTotals } from "../../hooks/useTotals";
 import { formatPrice } from "../../utils/formatPrice";
