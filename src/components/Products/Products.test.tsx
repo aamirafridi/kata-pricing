@@ -10,8 +10,8 @@ describe("Products", () => {
 
   it("should render products", () => {
     renderWithProviders(<Products />);
-    expect(screen.getByText(/face masks/i)).toBeInTheDocument();
-    expect(screen.getByText(/toilet paper/i)).toBeInTheDocument();
+    expect(screen.getByText("Face Masks")).toBeInTheDocument();
+    expect(screen.getByText("Toilet Paper")).toBeInTheDocument();
     expect(screen.getByText(/hand sanitizer/i)).toBeInTheDocument();
     expect(screen.getAllByText(/add item/i)).toHaveLength(3);
   });
