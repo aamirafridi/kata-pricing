@@ -17,4 +17,6 @@ export const products = [
     unitPrice: 3.5,
     priceLabel: "175ml @ £19.99 per litre",
   },
-] as const;
+];
+
+export type Product = typeof products[number];

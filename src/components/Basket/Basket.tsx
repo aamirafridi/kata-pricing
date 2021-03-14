@@ -1,23 +1,30 @@
 import React, { FunctionComponent } from "react";
-import { formatPrice } from "../../utils";
+import { usePricer } from "../../hooks/usePricer";
+import { formatPrice } from "../../utils/formatPrice";
 
 export const Basket: FunctionComponent = () => {
-  const basketProducts = [
-    {
-      id: 1,
-      name: "face masks",
-      unitPrice: 2.5,
-    },
-  ];
+  const { basketProducts, removeBasketProduct } = usePricer();
+
   return (
     <table>
-      <caption>Basket</caption>
+      <caption>
+        Basket ({basketProducts.length} item
+        {basketProducts.length === 1 ? "" : "s"})
+      </caption>
       <tbody>
-        {basketProducts.map((product) => (
-          <tr key={product.id}>
-            <td data-testid={`basket-item-${product.id}`}>{product.name}</td>
+        {basketProducts.map((product, index) => (
+          <tr key={`${product.id}-${index}`}>
+            <td data-testid={`basket-item-${product.id}`}>
+              {index + 1} : {product.name}
+            </td>
             <td data-testid={`basket-price-${product.id}`}>
               {formatPrice(product.unitPrice)}
+              <button
+                title="remove from the basket"
+                onClick={() => removeBasketProduct(product.id)}
+              >
+                X
+              </button>
             </td>
           </tr>
         ))}
@@ -27,7 +34,7 @@ export const Basket: FunctionComponent = () => {
         <tr>
           <td>Sub-total</td>
           <td data-testid="sub-total">
-            {formatPrice(basketProducts[0].unitPrice)}
+            {formatPrice(basketProducts[0]?.unitPrice)}
           </td>
         </tr>
         <tr>
@@ -36,7 +43,7 @@ export const Basket: FunctionComponent = () => {
         <tr>
           <td>Total to pay</td>
           <td data-testid="total">
-            {formatPrice(basketProducts[0].unitPrice)}
+            {formatPrice(basketProducts[0]?.unitPrice)}
           </td>
         </tr>
       </tbody>
