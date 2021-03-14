@@ -2,17 +2,10 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 
+// if data comes from an API, we will mock the source here
+
 describe("Kata pricing app", () => {
   afterEach(jest.clearAllMocks);
-
-  it("should render products", () => {
-    render(<App />);
-
-    expect(screen.getByText(/face masks/i)).toBeInTheDocument();
-    expect(screen.getByText(/toilet paper/i)).toBeInTheDocument();
-    expect(screen.getByText(/hand sanitizer/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/add item/i)).toHaveLength(3);
-  });
 
   it("should able to add a product to basket", () => {
     render(<App />);
