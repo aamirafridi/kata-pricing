@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/kata-pricing/static/css/main.5d162286.chunk.css",
-    "main.js": "/kata-pricing/static/js/main.7f4d5098.chunk.js",
-    "main.js.map": "/kata-pricing/static/js/main.7f4d5098.chunk.js.map",
+    "main.js": "/kata-pricing/static/js/main.8b64afee.chunk.js",
+    "main.js.map": "/kata-pricing/static/js/main.8b64afee.chunk.js.map",
     "runtime-main.js": "/kata-pricing/static/js/runtime-main.1ae6e060.js",
     "runtime-main.js.map": "/kata-pricing/static/js/runtime-main.1ae6e060.js.map",
     "static/js/2.db88d176.chunk.js": "/kata-pricing/static/js/2.db88d176.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1ae6e060.js",
     "static/js/2.db88d176.chunk.js",
     "static/css/main.5d162286.chunk.css",
-    "static/js/main.7f4d5098.chunk.js"
+    "static/js/main.8b64afee.chunk.js"
   ]
 }
