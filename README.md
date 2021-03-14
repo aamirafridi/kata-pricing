@@ -16,7 +16,7 @@ Demo: https://aamirafridi.github.io/kata-pricing/
 - precommit hooks added
 - avoided spending time on styles as it was not a requirement
 - valid and assessable HTML (you can add or remove products with keyboard tabbing and space-bar)
-
+- automatically deploys to github pages on pushing to main branch or with yarn deploy from local machine
 ---
 
 # Getting Started with Create React App
