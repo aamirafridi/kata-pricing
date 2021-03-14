@@ -21,7 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
+    "test:coverage": "npm test -- --coverage",
     "test:watch": "npm test --watchAll",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
@@ -43,6 +44,16 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    }
   },
   "browserslist": {
     "production": [

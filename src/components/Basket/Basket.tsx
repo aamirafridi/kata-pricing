@@ -26,6 +26,7 @@ export const Basket: FunctionComponent = () => {
               {formatPrice(product.unitPrice)}
               <button
                 title="remove from the basket"
+                data-testid={`remove-product-${index}`}
                 onClick={() => removeBasketProduct(product.id)}
               >
                 X

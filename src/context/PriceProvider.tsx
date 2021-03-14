@@ -26,10 +26,10 @@ export const PricerProvider: FunctionComponent = ({ children }) => {
 
   const basketProducts = basketProductIds.reduce(
     (result: Array<Product>, productId) => {
-      const foundProduct = products.find(({ id }) => id === productId);
-      if (foundProduct) {
-        result.push(foundProduct);
-      }
+      const foundProduct = products.find(
+        ({ id }) => id === productId
+      ) as Product;
+      result.push(foundProduct);
       return result;
     },
     []
